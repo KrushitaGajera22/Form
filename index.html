@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 4px;
+            border-radius: 5px;
+        }
+        h3{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        input[type=text], input[type=email], input[type=tel], select, textarea{
+            border: 1px solid black;
+            resize: both;
+            width: 50%;
+            padding: 5px;
+        }
+        button{
+            background-color: grey;
+            color: white;
+            padding: 8px;
+            border: 1px solid black;
+            cursor: pointer;
+            float: left;
+            width: 40%;
+        }
+        button:hover{
+            color: burlywood;
+        }
+        @media (min-width: 700px){
+            form{
+                column-count: 2;
+            }
+            h3{
+                text-align: center;
+            }
+        }
+        .container{
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h3>Form</h3>
+</header>
+<div class="container">
+    <form method="post">
+        <div class="row">
+            <div class="col-25">
+                <label for="fname">First Name: </label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fname" name="fname" placeholder="First Name" required autofocus>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Last Name: </label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="email">Email id: </label>
+            </div>
+            <div class="col-75">
+                <input type="email" placeholder=" Your Email" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="gender">Gender: </label>
+            </div>
+            <input type="radio" id="male" name="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="female" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="phone">Contact Number: </label>
+            </div>
+            <div class="col-75">
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="file">Photo: </label>
+            </div>
+            <div class="col-75">
+                <input type="file" id="myfile" name="myfile">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="address">Address: </label>
+            </div>
+            <div class="col-75">
+            <textarea name="address" cols="15" rows="5"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="subject">Select Subjects: </label>
+            </div>
+            <div class="col-75">
+                <input type="checkbox" id="sub1" name="sub1" value="html">
+                <label for="sub1">HTML</label><br>
+                <input type="checkbox" id="sub2" name="sub2" value="php">
+                <label for="sub2">PHP</label><br>
+                <input type="checkbox" id="sub3" name="sub3" value="java">
+                <label for="sub3">Java</label><br>
+                <input type="checkbox" id="sub4" name="sub4" value="javascript">
+                <label for="sub4">Javascript</label><br>
+                <input type="checkbox" id="sub5" name="sub5" value="python">
+                <label for="sub5">Python</label><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="city">City: </label>
+            </div>
+            <div class="col-75">
+                <select name="city" id="city">
+                    <option value="rajkot">Rajkot</option>
+                    <option value="Ahmdabad">Ahmdabad</option>
+                    <option value="Gandhinagar">Gandhinagar</option>
+                    <option value="Vadodara">Vadodara</option>
+                    <option value="amreli">Amreli</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" onclick="alert('Form Submitted')">Submit</button>
+   
+    </form>
+</div>
+</body>
+</html>
